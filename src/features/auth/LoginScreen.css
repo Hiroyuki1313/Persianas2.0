@@ -1,0 +1,66 @@
+.login-container {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl);
+  background-color: var(--primary);
+  color: white;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.login-header h1 {
+  font-size: var(--font-xl);
+}
+
+.highlight {
+  color: var(--success);
+}
+
+.login-header p {
+  font-family: var(--font-mono);
+  font-size: var(--font-xs);
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 400px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg);
+  color: var(--text-main);
+  border: none;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-mono);
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: var(--font-sm);
+}

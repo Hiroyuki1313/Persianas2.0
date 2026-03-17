@@ -1,0 +1,175 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: var(--font-lg);
+}
+
+.header-info h1 {
+  font-size: var(--font-lg);
+  margin: 0;
+}
+
+.header-info p {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.logout-btn {
+  margin-left: auto;
+  color: var(--error);
+}
+
+.stats-grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  min-height: 80px;
+  border-left: 4px solid var(--primary);
+}
+
+.stat-card.clickable {
+  cursor: pointer;
+}
+
+.stat-card.clickable:hover {
+  transform: translateY(-2px);
+  border-color: var(--secondary);
+}
+
+.stat-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-card.expanded {
+  grid-column: 1 / -1;
+  border-color: var(--secondary);
+  background-color: white;
+}
+
+.appointments-dropdown {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.appointment-mini-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px;
+}
+
+.apt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.apt-header strong {
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.apt-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  background-color: var(--navy);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.apt-loc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stat-icon {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: var(--font-lg);
+  font-weight: 700;
+}
+
+.banner-card {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.banner-card h3 {
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--success);
+}
+
+.banner-card p {
+  font-size: 10px;
+  opacity: 0.8;
+}

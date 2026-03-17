@@ -1,0 +1,77 @@
+.order-card {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.client-name {
+  font-size: var(--font-md);
+  margin: 0;
+}
+
+.order-total {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--font-md);
+  color: var(--primary);
+}
+
+.status-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.status-pending { background-color: #FFF3E0; color: #E65100; }
+.status-paid { background-color: #E8F5E9; color: #2E7D32; }
+.status-comizada { background-color: #E3F2FD; color: #1565C0; }
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--spacing-md);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+}
+
+.order-footer {
+  padding: 12px 16px;
+  background-color: #F8F9FA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.order-items-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-names {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--primary-light);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "user-1",
+    "name": "Mamá",
+    "profileColor": "#1A237E"
+  },
+  {
+    "id": "user-2",
+    "name": "Tía",
+    "profileColor": "#4CAF50"
+  },
+  {
+    "id": "user-3",
+    "name": "Admin",
+    "profileColor": "#1C1C1C"
+  },
+  {
+    "id": "user-4",
+    "name": "Asistente",
+    "profileColor": "#607D8B"
+  },
+  {
+    "id": "user-5",
+    "name": "Instalador",
+    "profileColor": "#795548"
+  }
+]

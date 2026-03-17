@@ -1,0 +1,39 @@
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-canvas);
+  padding: var(--spacing-sm) 0;
+  z-index: 10;
+}
+
+.orders-header h2 {
+  font-size: var(--font-lg);
+  color: var(--primary);
+  margin: 0;
+}
+
+.btn-fab {
+  border-radius: 30px;
+  padding: 8px 16px;
+}
+
+.search-bar {
+  margin-bottom: var(--spacing-sm);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: var(--font-sm);
+}

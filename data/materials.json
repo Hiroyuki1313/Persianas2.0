@@ -1,0 +1,17 @@
+[
+  {
+    "id": "mat-1",
+    "name": "Caffe Capucchio",
+    "pricePerM2": 330
+  },
+  {
+    "id": "mat-2",
+    "name": "Blackout White",
+    "pricePerM2": 450
+  },
+  {
+    "id": "mat-3",
+    "name": "Screen 5%",
+    "pricePerM2": 520
+  }
+]

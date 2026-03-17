@@ -1,0 +1,31 @@
+.order-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.form-header h2 {
+  font-size: var(--font-lg);
+  color: var(--primary);
+  margin: 0;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.back-btn {
+  padding: 8px;
+}
+
+.submit-btn {
+  margin-top: var(--spacing-sm);
+}
