@@ -39,10 +39,10 @@ export const CalculadoraModule: React.FC = () => {
   const updateItem = (id: string, updates: Partial<IBlindItem>) => {
     setStagedItems(prev => prev.map(item => {
       if (item.id !== id) return item;
-      
+
       const updated = { ...item, ...updates };
       const mat = materials.find(m => m.id === updated.materialId);
-      
+
       if (mat && updated.width > 0 && updated.height > 0) {
         updated.area = pricingEngine.calculateArea(updated.width, updated.height);
         updated.subtotal = pricingEngine.calculateSubtotal(updated.width, updated.height, mat.pricePerM2);
@@ -50,7 +50,7 @@ export const CalculadoraModule: React.FC = () => {
         updated.area = 0;
         updated.subtotal = 0;
       }
-      
+
       return updated;
     }));
   };
@@ -65,7 +65,7 @@ export const CalculadoraModule: React.FC = () => {
 
   const handleSaveAllToOrder = () => {
     if (!selectedOrderId) return alert('Selecciona una orden primero');
-    
+
     // Validation
     const invalidItems = stagedItems.filter(i => !i.name || i.width <= 0 || i.height <= 0);
     if (invalidItems.length > 0) {
@@ -80,7 +80,6 @@ export const CalculadoraModule: React.FC = () => {
     setStagedItems([createEmptyItem()]);
   };
 
-  const totalArea = stagedItems.reduce((acc, curr) => acc + curr.area, 0);
   const totalSubtotal = stagedItems.reduce((acc, curr) => acc + curr.subtotal, 0);
   const isListValid = stagedItems.every(i => i.name && i.width > 0 && i.height > 0);
 
@@ -99,7 +98,7 @@ export const CalculadoraModule: React.FC = () => {
                 <Trash2 size={16} color="var(--error)" />
               </Button>
             </div>
-            
+
             <div className="calc-form">
               <Input
                 label="Ubicación / Nombre"
@@ -107,7 +106,7 @@ export const CalculadoraModule: React.FC = () => {
                 value={item.name}
                 onChange={(e) => updateItem(item.id, { name: e.target.value })}
               />
-              
+
               <div className="dimensions-row">
                 <Input
                   label="Ancho"
