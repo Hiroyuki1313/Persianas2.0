@@ -306,11 +306,12 @@
 
 .footer-stats {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   background: #f1f3f5; /* Gris suave */
   color: var(--text-main);
   padding: 8px 12px;
   border-radius: var(--radius-md);
+  margin-left: auto; /* Push the whole box to the right */
   width: fit-content;
 }
 
