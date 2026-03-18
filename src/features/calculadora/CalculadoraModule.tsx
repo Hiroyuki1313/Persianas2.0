@@ -107,6 +107,13 @@ export const CalculadoraModule: React.FC = () => {
                 onChange={(e) => updateItem(item.id, { name: e.target.value })}
               />
 
+              <Select
+                label="Material"
+                options={materialOptions}
+                value={item.materialId}
+                onChange={(e) => updateItem(item.id, { materialId: e.target.value })}
+              />
+
               <div className="dimensions-row">
                 <Input
                   label="Ancho"
@@ -130,13 +137,6 @@ export const CalculadoraModule: React.FC = () => {
               <div className="item-area-row">
                 <span>{item.area.toFixed(2)} m²</span>
               </div>
-
-              <Select
-                label="Material"
-                options={materialOptions}
-                value={item.materialId}
-                onChange={(e) => updateItem(item.id, { materialId: e.target.value })}
-              />
 
               <div className="item-mini-footer">
                 <span>Subtotal: ${item.subtotal.toLocaleString()}</span>
