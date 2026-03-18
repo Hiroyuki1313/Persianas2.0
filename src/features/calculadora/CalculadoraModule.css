@@ -31,30 +31,35 @@
 
 .dimensions-row {
   display: flex;
-  align-items: flex-end;
-  gap: 8px;
+  align-items: center; /* Changed from flex-end for better centering with separator */
+  gap: 4px;
   width: 100%;
+  padding: 0 4px;
 }
 
 .dim-separator {
-  padding-bottom: 12px;
-  font-weight: bold;
   color: var(--text-muted);
-  font-size: 1.2rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 14px; /* Adjust for label height */
 }
 
 .compact-input {
   flex: 1;
+  min-width: 0; /* Critical for flex items to shrink below content size */
 }
 
 .compact-input .input-label {
-  font-size: 0.75rem;
-  margin-bottom: 2px;
+  font-size: 0.65rem; /* Even smaller */
+  margin-bottom: 1px;
 }
 
 .compact-input .input-field {
-  padding: 8px;
+  padding: 6px 4px; /* Squeeze more */
+  font-size: 0.85rem;
   text-align: center;
+  width: 100%;
 }
 
 .calc-results {
