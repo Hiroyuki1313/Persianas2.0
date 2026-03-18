@@ -29,6 +29,34 @@
   }
 }
 
+.dimensions-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+}
+
+.dim-separator {
+  padding-bottom: 12px;
+  font-weight: bold;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.compact-input {
+  flex: 1;
+}
+
+.compact-input .input-label {
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+}
+
+.compact-input .input-field {
+  padding: 8px;
+  text-align: center;
+}
+
 .calc-results {
   display: flex;
   justify-content: space-between;

@@ -100,28 +100,31 @@ export const CalculadoraModule: React.FC = () => {
             value={itemName}
             onChange={(e) => setItemName(e.target.value)}
           />
-          <div className="form-row">
+          <div className="dimensions-row">
             <Input
-              label="Ancho (cm)"
+              label="Ancho"
               type="number"
               placeholder="0"
               value={width}
               onChange={(e) => setWidth(e.target.value ? Number(e.target.value) : '')}
+              className="compact-input"
             />
+            <span className="dim-separator">×</span>
             <Input
-              label="Alto (cm)"
+              label="Alto"
               type="number"
               placeholder="0"
               value={height}
               onChange={(e) => setHeight(e.target.value ? Number(e.target.value) : '')}
-            />
-            <Select
-              label="Material / Tela"
-              options={materialOptions}
-              value={selectedMaterialId}
-              onChange={(e) => setSelectedMaterialId(e.target.value)}
+              className="compact-input"
             />
           </div>
+          <Select
+            label="Material / Tela"
+            options={materialOptions}
+            value={selectedMaterialId}
+            onChange={(e) => setSelectedMaterialId(e.target.value)}
+          />
 
           <div className="calc-results">
             <div className="result-item">
