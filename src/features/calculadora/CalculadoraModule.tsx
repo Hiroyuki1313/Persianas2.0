@@ -14,7 +14,7 @@ import './CalculadoraModule.css';
 export const CalculadoraModule: React.FC = () => {
   const { orders, addItemToOrder } = useOrdersStore();
   const [materials] = useState<IMaterial[]>(materialsData);
-  
+
   // Current Item State
   const [itemName, setItemName] = useState('');
   const [width, setWidth] = useState<number | ''>('');
@@ -61,7 +61,7 @@ export const CalculadoraModule: React.FC = () => {
     };
 
     setStagedItems([...stagedItems, newItem]);
-    
+
     // Reset individual form
     setItemName('');
     setWidth('');
@@ -79,7 +79,7 @@ export const CalculadoraModule: React.FC = () => {
     stagedItems.forEach(item => {
       addItemToOrder(selectedOrderId, item);
     });
-    
+
     alert(`Se agregaron ${stagedItems.length} persianas a la orden`);
     setStagedItems([]);
   };
@@ -94,34 +94,32 @@ export const CalculadoraModule: React.FC = () => {
 
       <Card className="calc-card">
         <div className="calc-form">
-          <Input 
-            label="Nombre / Identificador" 
+          <Input
+            label="Nombre / Identificador"
             placeholder="Ej. Window Sala, Recámara Principal..."
             value={itemName}
             onChange={(e) => setItemName(e.target.value)}
           />
-
-          <Select 
-            label="Material / Tela" 
-            options={materialOptions} 
-            value={selectedMaterialId}
-            onChange={(e) => setSelectedMaterialId(e.target.value)}
-          />
-          
           <div className="form-row">
-            <Input 
-              label="Ancho (cm)" 
-              type="number" 
+            <Input
+              label="Ancho (cm)"
+              type="number"
               placeholder="0"
-              value={width} 
-              onChange={(e) => setWidth(e.target.value ? Number(e.target.value) : '')} 
+              value={width}
+              onChange={(e) => setWidth(e.target.value ? Number(e.target.value) : '')}
             />
-            <Input 
-              label="Alto (cm)" 
-              type="number" 
+            <Input
+              label="Alto (cm)"
+              type="number"
               placeholder="0"
-              value={height} 
-              onChange={(e) => setHeight(e.target.value ? Number(e.target.value) : '')} 
+              value={height}
+              onChange={(e) => setHeight(e.target.value ? Number(e.target.value) : '')}
+            />
+            <Select
+              label="Material / Tela"
+              options={materialOptions}
+              value={selectedMaterialId}
+              onChange={(e) => setSelectedMaterialId(e.target.value)}
             />
           </div>
 
@@ -136,9 +134,9 @@ export const CalculadoraModule: React.FC = () => {
             </div>
           </div>
 
-          <Button 
-            variant="outline" 
-            fullWidth 
+          <Button
+            variant="outline"
+            fullWidth
             onClick={handleAddToList}
             disabled={!itemName || !width || !height}
           >
@@ -153,7 +151,7 @@ export const CalculadoraModule: React.FC = () => {
           <header className="section-header">
             <h3><List size={16} /> Persianas en lista ({stagedItems.length})</h3>
           </header>
-          
+
           <div className="staged-list">
             {stagedItems.map(item => {
               const mat = materials.find(m => m.id === item.materialId);
@@ -180,14 +178,14 @@ export const CalculadoraModule: React.FC = () => {
           </div>
 
           <div className="injection-area">
-            <Select 
-              options={orderOptions} 
+            <Select
+              options={orderOptions}
               value={selectedOrderId}
               onChange={(e) => setSelectedOrderId(e.target.value)}
             />
-            <Button 
-              variant="primary" 
-              fullWidth 
+            <Button
+              variant="primary"
+              fullWidth
               onClick={handleSaveAllToOrder}
               disabled={!selectedOrderId}
               className="save-btn"
