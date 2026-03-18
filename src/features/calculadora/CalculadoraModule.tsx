@@ -154,6 +154,15 @@ export const CalculadoraModule: React.FC = () => {
       </div>
 
       <footer className="calc-sticky-footer">
+        <div className="footer-summary-list">
+          {stagedItems.map((item, idx) => (
+            <div key={item.id} className="summary-row">
+              <span className="summary-name">#{idx + 1} {item.name || 'Persiana'}</span>
+              <span className="summary-total">${item.subtotal.toLocaleString()}</span>
+            </div>
+          ))}
+        </div>
+
         <div className="footer-stats">
           <div className="stat-item">
             <span className="stat-label">TOTAL M²</span>
