@@ -128,6 +128,10 @@ export const CalculadoraModule: React.FC = () => {
                 />
               </div>
 
+              <div className="item-area-row">
+                <span>{item.area.toFixed(2)} m²</span>
+              </div>
+
               <Select
                 label="Material"
                 options={materialOptions}
@@ -164,12 +168,8 @@ export const CalculadoraModule: React.FC = () => {
         </div>
 
         <div className="footer-stats">
-          <div className="stat-item">
-            <span className="stat-label">TOTAL M²</span>
-            <span className="stat-value">{totalArea.toFixed(2)}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-label">GRAN TOTAL</span>
+          <div className="stat-item total-only">
+            <span className="stat-label">Total</span>
             <span className="stat-value">${totalSubtotal.toLocaleString()}</span>
           </div>
         </div>
