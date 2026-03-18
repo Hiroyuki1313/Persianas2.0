@@ -1,14 +1,20 @@
 .calc-container {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.calc-header h2 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--primary);
+.scrolling-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-md);
+  padding-bottom: 220px; /* Space for sticky footer */
+}
+
+.calc-header {
+  padding: var(--spacing-md) var(--spacing-md) 0;
 }
 
 .calc-form {
@@ -207,28 +213,88 @@
   color: var(--text-main);
 }
 
-.staged-summary {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  background-color: var(--primary);
-  color: white;
-  border-radius: var(--radius-md);
-  font-family: var(--font-mono);
-  margin-top: 4px;
+.staged-card {
+  margin-bottom: var(--spacing-md);
+  border-left: 5px solid var(--primary);
 }
 
-@media (max-width: 600px) {
-  .staged-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  
-  .item-actions {
-    width: 100%;
-    justify-content: space-between;
-  }
+.card-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.item-number {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.item-mini-footer {
+  margin-top: 12px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--success);
+  font-size: 0.9rem;
+}
+
+.add-blank-btn {
+  margin-bottom: 40px;
+}
+
+.calc-sticky-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: var(--spacing-md);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  border-top: 1px solid var(--border);
+  z-index: 10;
+}
+
+.footer-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  background: var(--bg-soft);
+  padding: 12px;
+  border-radius: var(--radius-md);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  font-family: var(--font-mono);
+}
+
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-select-footer {
+  width: 100%;
 }
 
 .delete-btn {
